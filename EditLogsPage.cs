@@ -36,11 +36,19 @@ namespace Tur_og_Retur___Kørsels_Logbog
                 command.Parameters.AddWithValue("@newUserId", Convert.ToInt32(UserID_TextBox.Text));
                 command.Parameters.AddWithValue("@newWhereFrom", From_TextBox.Text);
                 command.Parameters.AddWithValue("@newWhereTo", To_TextBox.Text);
-
                 command.Parameters.AddWithValue("@logId", Variables.LogSelectedItemLogId);
 
                 if (!Global.GetLogIdList().Contains(Convert.ToInt32(LogID_TextBox.Text)) || LogID_TextBox.Text == Variables.LogSelectedItemLogId)
                 {
+                    if (!Global.GetUserIdList().Contains(Convert.ToInt32(UserID_TextBox.Text)))
+                    {
+                        MessageBox.Show("Bruger-ID eksisterer ikke");
+
+                        UserID_TextBox.Text = Variables.UserID.ToString();
+                        UserID_TextBox.Focus();
+                        return;
+                    }
+
                     command.ExecuteNonQuery();
                     MessageBox.Show("Ændringerne er blevet fuldført");
 

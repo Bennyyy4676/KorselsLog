@@ -74,7 +74,7 @@ namespace Tur_og_Retur___Kørsels_Logbog
                 if (Variables.UpdateUserID == true)
                 {
                     Variables.UserID = Global.GetUserIdByUsername(ListBox.SelectedItem.ToString());
-                    Variables.UsernameHeader = (ListBox.SelectedItem.ToString());
+                    Variables.Username = (ListBox.SelectedItem.ToString());
 
                     if (Variables.UserID != -1)
                     {
@@ -124,7 +124,7 @@ namespace Tur_og_Retur___Kørsels_Logbog
                 SqlDataReader reader = command.ExecuteReader();
                 
                 ListBox.Items.Clear();
-                ListBox.Items.Add(Variables.UsernameHeader + ":");
+                ListBox.Items.Add(Variables.Username + ":");
                 ListBox.Items.Add("Opgaver:");
 
                 if (reader.HasRows)

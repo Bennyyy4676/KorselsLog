@@ -27,7 +27,3 @@ C:\Users\Administrator\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels L
 C:\Users\Administrator\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.EditUserPage.resources
 C:\Users\Administrator\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.EditLogsPage.resources
 C:\Users\Administrator\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.CreateNewUser.resources
-C:\Users\marros\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.AdminPage.resources
-C:\Users\marros\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.CreateNewUser.resources
-C:\Users\marros\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.EditLogsPage.resources
-C:\Users\marros\Documents\Visual Studio 2022\C#\Tur og Retur - Kørsels Logbog\obj\Debug\Tur_og_Retur___Kørsels_Logbog.EditUserPage.resources

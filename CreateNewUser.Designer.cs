@@ -34,6 +34,7 @@
             this.Username_Label = new System.Windows.Forms.Label();
             this.Password_Label = new System.Windows.Forms.Label();
             this.SaveUser_Button = new System.Windows.Forms.Button();
+            this.Admin_CheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Password_TextBox
@@ -83,7 +84,7 @@
             // SaveUser_Button
             // 
             this.SaveUser_Button.ForeColor = System.Drawing.Color.Black;
-            this.SaveUser_Button.Location = new System.Drawing.Point(159, 168);
+            this.SaveUser_Button.Location = new System.Drawing.Point(159, 190);
             this.SaveUser_Button.Name = "SaveUser_Button";
             this.SaveUser_Button.Size = new System.Drawing.Size(84, 26);
             this.SaveUser_Button.TabIndex = 18;
@@ -91,11 +92,22 @@
             this.SaveUser_Button.UseVisualStyleBackColor = true;
             this.SaveUser_Button.Click += new System.EventHandler(this.SaveUser_Button_Click);
             // 
+            // Admin_CheckBox
+            // 
+            this.Admin_CheckBox.AutoSize = true;
+            this.Admin_CheckBox.Location = new System.Drawing.Point(158, 157);
+            this.Admin_CheckBox.Name = "Admin_CheckBox";
+            this.Admin_CheckBox.Size = new System.Drawing.Size(86, 17);
+            this.Admin_CheckBox.TabIndex = 19;
+            this.Admin_CheckBox.Text = "Administrator";
+            this.Admin_CheckBox.UseVisualStyleBackColor = true;
+            // 
             // CreateNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 218);
+            this.ClientSize = new System.Drawing.Size(399, 241);
+            this.Controls.Add(this.Admin_CheckBox);
             this.Controls.Add(this.Password_TextBox);
             this.Controls.Add(this.Username_TextBox);
             this.Controls.Add(this.NyBruger_Label);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Label Username_Label;
         private System.Windows.Forms.Label Password_Label;
         private System.Windows.Forms.Button SaveUser_Button;
+        private System.Windows.Forms.CheckBox Admin_CheckBox;
     }
 }

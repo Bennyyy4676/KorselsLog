@@ -19,8 +19,8 @@ namespace Tur_og_Retur___Kørsels_Logbog
             InitializeComponent();
             PopulateListbox();
 
-            Username_Label.Text = Variables.UsernameHeader;
-            Username_TextBox.Text = Variables.UsernameHeader;
+            Username_Label.Text = Variables.Username;
+            Username_TextBox.Text = Variables.Username;
             UserID_TextBox.Text = Variables.UserID.ToString();
         }
 
@@ -76,15 +76,17 @@ namespace Tur_og_Retur___Kørsels_Logbog
 
                 if (Global.GetUsernameList().Contains(Username_TextBox.Text))
                 {
-                    if (Username_TextBox.Text == Variables.UsernameHeader)
+                    if (Username_TextBox.Text == Variables.Username)
                     {
                         goto label1;
                     }
+                    else
+                    {
+                        MessageBox.Show("Brugernavn eksisterer allerede");
+                        Username_TextBox.Focus();
 
-                    MessageBox.Show("Brugernavn eksisterer allerede");
-                    Username_TextBox.Focus();
-
-                    return;
+                        return;
+                    }
                 }
 
                 label1:
@@ -92,11 +94,17 @@ namespace Tur_og_Retur___Kørsels_Logbog
                 {
                     if (Convert.ToInt32(UserID_TextBox.Text) == Variables.UserID)
                     {
-                        return;
-                    }
+                        command.ExecuteNonQuery();
 
-                    MessageBox.Show("Bruger-ID eksisterer allerede");
-                    UserID_TextBox.Focus();
+                        MessageBox.Show("Ændringerne er blevet fuldført");
+                        Forms.AdminPage();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bruger-ID eksisterer allerede");
+                        UserID_TextBox.Focus();
+                    }
                 }
                 else
                 {

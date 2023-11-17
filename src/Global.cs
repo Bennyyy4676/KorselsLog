@@ -22,7 +22,7 @@ namespace Tur_og_Retur___Kørsels_Logbog
 
         public static string HelloLabel { get; set; }
 
-        public static string UsernameHeader { get; set; }
+        public static string Username { get; set; }
 
         public static int AdminID { get; set; }
 
@@ -154,7 +154,7 @@ namespace Tur_og_Retur___Kørsels_Logbog
         public static List<string> GetUsernameList()
         {
             List<string> usernameList = new List<string>();
-            string selectQuery = "SELECT Username FROM Users";
+            string selectQuery = "SELECT Username FROM Users UNION SELECT AdminUsername FROM Admins";
 
             using (SqlConnection sqlConn = new SqlConnection(@"Data Source=WIN-ACDDOS57HEI\MSSQLSERVER01;Initial Catalog=Kørselslog;Integrated Security=True"))
             {
